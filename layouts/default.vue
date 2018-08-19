@@ -1,5 +1,6 @@
 <template>
-<div>
+  <div>
+    <Menu />
     <nuxt/>
     <foot/>
 </div>
