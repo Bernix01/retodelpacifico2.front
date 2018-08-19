@@ -1,0 +1,30 @@
+{
+  "name": "rp2.front",
+  "version": "1.0.0",
+  "description": "Reto del Pacifico",
+  "author": "Guillermo Enrique Bernal Moreira <gbernal096@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@nuxtjs/auth": "^4.5.1",
+    "@nuxtjs/axios": "^5.3.1",
+    "nuxt": "^1.0.0",
+    "nuxt-i18n": "^5.1.1",
+    "vue-notifications": "^0.9.0",
+    "vue-toasted": "^1.1.24"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0"
+  }
+}
