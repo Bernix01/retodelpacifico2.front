@@ -3,13 +3,15 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: "rp2.front",
+    title: "Reto del Pacífico",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "Reto del Pacifico" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
+    ]
   },
   /*
   ** Customize the progress bar color
@@ -36,31 +38,54 @@ module.exports = {
   modules: [
     "@nuxtjs/axios",
     "@nuxtjs/auth",
-    [
-      "nuxt-i18n",
-      {
-        // Options
-      }
-    ]
+    // [
+    //   "nuxt-i18n",
+    //   {
+    //     locales: ["en", "es"],
+    //     defaultLocale: "en",
+    //     vueI18n: {
+    //       fallbackLocale: "en",
+    //       messages: {
+    //         en: {
+    //           welcome: "Welcome"
+    //         },
+    //         es: {
+    //           welcome: "Bienvenido"
+    //         }
+    //       }
+    //     }
+    //   }
+    // ],
+    "@nuxtjs/pwa",
+    ["bootstrap-vue/nuxt", { css: false }]
   ],
-
   auth: {
-    // Options
+    redirect: {
+      callback: "/callback"
+    },
     strategies: {
       local: {
         endpoints: {
           login: {
-            url: "/api/auth/login",
+            url: "http://localhost:8000/api/v0.0/auth/token/create/",
             method: "post",
-            propertyName: "token"
+            propertyName: "auth_token"
           },
-          logout: { url: "/api/auth/logout", method: "post" },
-          user: { url: "/api/auth/user", method: "get", propertyName: "user" }
+          logout: {
+            url: "http://localhost:8000/api/v0.0/auth/token/destroy/",
+            method: "post"
+          },
+          user: {
+            url: "http://localhost:8000/api/v0.0/auth/me/",
+            method: "get",
+            propertyName: ""
+          }
         },
-        tokenRequired: true,
-        tokenType: "Token"
+        tokenType: 'Token',
       }
     }
   },
-  middleware: ["auth"]
+  router: {
+    middleware: ["auth"]
+  }
 };
