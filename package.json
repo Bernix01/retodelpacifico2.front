@@ -16,8 +16,11 @@
     "@nuxtjs/auth": "^4.5.1",
     "@nuxtjs/axios": "^5.3.1",
     "@nuxtjs/pwa": "^2.0.8",
+    "bootstrap-vue": "^2.0.0-rc.11",
+    "node-sass": "^4.9.3",
     "nuxt": "^1.0.0",
     "nuxt-i18n": "^5.1.1",
+    "sass-loader": "^7.1.0",
     "vue-notifications": "^0.9.0",
     "vue-toasted": "^1.1.24"
   },

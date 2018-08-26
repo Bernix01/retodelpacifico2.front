@@ -13,6 +13,10 @@ module.exports = {
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
     ]
   },
+  css: [
+    { src: "~assets/style/rp2.epic.css", lang: "css" },
+    { src: "~assets/style/main.scss", lang: "sass" }
+  ],
   /*
   ** Customize the progress bar color
   */
