@@ -1,9 +1,19 @@
 <template>
-  <div>
+<div>
     <nuxt/>
-  </div>
+    <foot/>
+</div>
 </template>
 
+<script>
+import Foot from '~/components/Foot.vue'
+
+export default {
+  components: {
+    Foot
+  }
+}
+</script>
 <style>
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
